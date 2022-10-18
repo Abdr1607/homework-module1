@@ -64,7 +64,7 @@ ul li {
     text-decoration: none;
     list-style-type: none;
 }
-section {
+.partnercol {
     width: 100%;
     background-color: #4288c3;
 }
@@ -202,4 +202,26 @@ fieldset {
     background-color: #4977D1;
     color: white;
     padding: 15px 60px
+}
+.row {
+    padding: 45px 90px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.image-1 {
+    width: 45%;
+    float: left;
+    margin: 10px;
+}
+.image-1 img {
+    width: 100%;
+}
+.red {
+    background-color: red;
+    text-align: center;
+    color: white;
+    padding: 15px;
 }
