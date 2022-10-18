@@ -56,10 +56,14 @@ the Cliffs, Hours of Operations, Facilities or questions about this site using o
     
     <div class="radios">
         <label>How should we contact you?</label>  
-        <input type="radio" name="contact" value="email" checked>Email 
-        <input type="radio" name="contact" value="phone">Phone
+        <input type="radio" name="contact" onclick="handleClick(this);"  id="email" value="Email" checked>Email 
+        <input type="radio" name="contact" onclick="handleClick(this);"  id="phone" value="Phone">Phone
     </div>
-
+        <div class="input">
+            <label>Enter your <span id="phone-email">Email</span></label>
+            <input type="text" id="placeholder"/>
+        </div>
+   
     <div class="selectmenu">
         <label>Which Cliff are you inquiring?</label>  
         <select>
@@ -85,6 +89,15 @@ the Cliffs, Hours of Operations, Facilities or questions about this site using o
 </fieldset>  
 </form>
 </main>
+<script>
+var rad = document.methods.contact;
+var prev = null;
+var currentValue = 0;
+function handleClick(contact) {
+    document.getElementById("phone-email").innerHTML = contact.value;
+    currentValue = myRadio.value;
+}
+</script>
 <script src="js/digclock.js"></script>
 <script src="js/site_scripts.js"></script>
 </html>
