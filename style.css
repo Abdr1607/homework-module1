@@ -225,3 +225,9 @@ fieldset {
     color: white;
     padding: 15px;
 }
+
+.current-time {
+    text-align: center;
+    width: 100%;
+    background-color: red;
+}
