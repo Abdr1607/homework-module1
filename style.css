@@ -231,3 +231,7 @@ fieldset {
     width: 100%;
     background-color: red;
 }
+
+td:hover, td.selected {
+    background-color: #FF9900
+}
