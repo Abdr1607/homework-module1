@@ -69,6 +69,7 @@ main {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 100px 0 100px;
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 main h1 {
     color: #9ed034;
@@ -183,7 +184,9 @@ td:first-child {
 }
 
 /* Contact */
-
+p {
+    margin-bottom: 30px;
+}
 .phone span:first-child {
     font-weight: bold;
 }
@@ -191,7 +194,7 @@ td:first-child {
     font-weight: bold;
 }
 .email {
-    margin-top: 5px;
+    margin-top: 10px;
 }
 fieldset {
     font-weight: bold;
@@ -216,6 +219,9 @@ label {
 .radios label {
     display: inline;
     font-weight: bold;
+}
+.radios input {
+    height: 15px;
 }
 .selectmenu {
     margin-top: 20px;
@@ -248,5 +254,6 @@ input[type="submit"] {
     background-color: #4977D1;
     height: 40px;
     border: solid #4977D1;
+    font-size: large;
 
 }
