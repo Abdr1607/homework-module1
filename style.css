@@ -15,7 +15,10 @@ header {
 #contact header {
     background: no-repeat lightgrey url(images/cliff_rock.jpg);
     background-size: 1500px;
-    
+}
+#cliffs header {
+    background: no-repeat lightgray url(images/forest_cliff.jpg);
+    background-size: 1500px;
 }   
 .main-header {
     background-color:rgb(255, 255, 255, 0.8);
@@ -95,6 +98,28 @@ section #partners .partner {
 section #partners .partner img {
     width: 90px;
     height: 90px;
+}
+.container1 {
+    display: inline-block;
+    margin-left: 60px;
+}
+.box {
+    max-width: 40%;
+    float: left;
+    margin: 2%;
+}
+.box p {
+    background-color: brown;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: #fff;
+    font-weight: bold;
+}
+.box img {
+    width: 100%;
 }
 
 /* Footer */
