@@ -32,7 +32,7 @@
 
             currentTime();*/
 
-            function currentTime() {
+            /*function currentTime() {
                 var d = new Date();
                 var hr = d.getHours();
                 var min = d.getMinutes();
@@ -94,4 +94,48 @@
                 setInterval(currentTime, 1000);
             }
 
+            currentTime();*/
+            function currentTime() {
+                var d = new Date();
+                var hr = d.getHours();
+                var min = d.getMinutes();
+                var sec = d.getSeconds();
+                var ampm;
+            
+                if (sec < 10) {
+                    sec = "0" + sec;
+                }
+                if (min < 10) {
+                    min = "0" + min;
+                }
+            
+                // Los Angeles is in the Pacific Time Zone (PT)
+                var timeZone = "PT";
+                var standardTimeOffset = -8;
+                var daylightTimeOffset = -7;
+                var currentOffset = d.getTimezoneOffset() / 60;
+                var isDaylightSaving = (currentOffset === daylightTimeOffset);
+            
+                if (isDaylightSaving) {
+                    timeZone += " (PDT)";
+                } else {
+                    timeZone += " (PST)";
+                }
+            
+                if (hr >= 12) {
+                    ampm = "PM";
+                    hr = hr > 12 ? hr - 12 : hr;
+                } else {
+                    ampm = "AM";
+                    hr = hr === 0 ? 12 : hr; // Convert 0 hr to 12 AM
+                }
+            
+                var time = hr + ":" + min + ":" + sec + " " + ampm + " " + timeZone;
+                document.getElementById("clock").innerText = time;
+            }
+            
+            // Initialize the clock.
             currentTime();
+            // Set the clock to update every second.
+            setInterval(currentTime, 1000);
+            
