@@ -79,5 +79,5 @@ function evaluateCode() {
 // Call disableButton with true as soon as the code is generated to ensure the button starts disabled
 disableButton(true);
 
-// Assuming you have an input field for the user to type the code, set up the event listenera
+// Assuming you have an input field for the user to type the code, set up the event listener
 document.getElementsByName("randomcode")[0].addEventListener("input", evaluateCode);
