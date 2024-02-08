@@ -1,5 +1,5 @@
-/*function generateCode() {
     var code = '';
+function generateCode() {
     var getCode = '';
     var btnvalue;
     var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$';
@@ -28,56 +28,49 @@ var codebox = document.getElementById("codeentered");
 codebox.addEventListener("input", evaluateCode);
 
 function evaluateCode() {
-    var enteredCode = codebox.value;
     getCode = document.getElementById("codeentered").value;
     var charset1 = getCode.trim();
     var charset2 = code.trim();
 
     if (charset1.length == charset2.length && charset1 == charset2) {
         disableButton(false);
+    } else {
+        disableButton(true);
     }
 }
 
-disableButton();*/
-
-
-function generateCode() {
+/*function generateCode() {
     var code = '';
     var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$';
 
-    for (i = 1; i <= 8; i++) {
+    for (var i = 1; i <= 8; i++) {
         var char = Math.floor(Math.random() * str.length);
         code += str.charAt(char);
     }
     return code;
 }
 
-var code = generateCode(); // Store generated code in a variable for later comparison
-document.getElementById("codes").innerHTML = code; // Display the generated code
+var generatedCode = generateCode(); // Store the generated code in a variable accessible globally
+document.getElementById("codes").innerHTML = generatedCode;
 
 function disableButton(btnvalue) {
-    var button = document.getElementById("submit");
-    button.disabled = btnvalue;
-    if (btnvalue) {
-        button.style.backgroundColor = "rgba(73, 119, 209, 0.3)";
-        button.style.color = "rgba(255, 255, 255, 0.5)";
+    document.getElementById("submit").disabled = btnvalue;
+    if (btnvalue === true) {
+        document.getElementById("submit").style.backgroundColor = "rgba(73, 119, 209, 0.3)";
+        document.getElementById("submit").style.color = "rgba(255, 255, 255, 0.5)";
     } else {
-        button.style.backgroundColor = "rgba(73, 119, 209, 1)";
-        button.style.color = "rgba(255, 255, 255, 1)";
+        document.getElementById("submit").style.backgroundColor = "rgba(73, 119, 209, 1)";
+        document.getElementById("submit").style.color = "rgba(255, 255, 255, 1)";
     }
 }
+
+var codebox = document.getElementById("codeentered");
+codebox.addEventListener("input", evaluateCode);
 
 function evaluateCode() {
-    var enteredCode = document.getElementsByName("randomcode")[0].value; 
-    if (enteredCode.length === code.length && enteredCode === code) {
+    var getCode = document.getElementById("codeentered").value.trim();
+
+    if (getCode === generatedCode) {
         disableButton(false);
-    } else {
-        disableButton(true);
     }
-}
-
-// Call disableButton with true as soon as the code is generated to ensure the button starts disabled
-disableButton(true);
-
-// Assuming you have an input field for the user to type the code, set up the event listener
-document.getElementsByName("randomcode")[0].addEventListener("input", evaluateCode);
+}*/
