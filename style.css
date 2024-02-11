@@ -215,7 +215,6 @@ td:first-child {
 }
 .not-available {
     cursor: not-allowed;
-    color: #999999; /* Grey out the text for 'Not Available' cells */
 }
 
 td:not(.not-available):hover {
