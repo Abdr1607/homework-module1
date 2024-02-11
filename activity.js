@@ -9,7 +9,7 @@ $(document).ready(function() {
         }
     });
 
-    // Toggle highlight class on click, ignoring the first column and 'Not Available' cells
+    // Toggle highlight class on click, ignoring the first column and 'Not Available' cellsa
     $('tbody tr td:not(:first-child)').click(function() {
         if (!$(this).hasClass('not-available')) {
             $(this).toggleClass('highlight');
