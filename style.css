@@ -208,6 +208,21 @@ td:first-child {
     background: #BDE1FF;
 }
 
+.highlight {
+    background-color: #9ed034; /* Yellow shade for highlighting */
+    color: #fff;
+    font-weight: bold;
+}
+.not-available {
+    cursor: not-allowed;
+    color: #999999; /* Grey out the text for 'Not Available' cells */
+}
+
+td:not(.not-available):hover {
+    cursor: pointer;
+}
+
+
 /* Contact */
 p {
     margin-bottom: 30px;
