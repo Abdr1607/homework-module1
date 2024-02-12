@@ -297,22 +297,24 @@ form .button input {
     font-size: large;
 }
 
-
-
 .randomcode input[type="text"],
+.randomcode {
+    margin-top: 10px;
+    margin-left: 200px;
+    margin-bottom: 10px;
+}
 .randomcode p {
     display: inline;
     margin: 10px 0;
     padding: 10px;
-    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+    box-sizing: border-box; 
     font-weight: normal;
 }
 .randomcode input {
     height: 30px;
-    
 }
 .randomcode p {
-    background-color: #aeadad; /* Gives a light grey background similar to disabled input */
+    background-color: #aeadad; 
 }
 #codes {
     height: 40px;
