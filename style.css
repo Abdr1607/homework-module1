@@ -300,24 +300,29 @@ form .button input {
 .randomcode input[type="text"],
 .randomcode {
     margin-top: 10px;
-    margin-left: 200px;
+    margin-left: 190px;
     margin-bottom: 10px;
+}
+#codeentered {
+    margin-right: 10px;
 }
 .randomcode p {
     display: inline;
     margin: 10px 0;
     padding: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
     box-sizing: border-box; 
     font-weight: normal;
 }
 .randomcode input {
-    height: 30px;
+    height: 25px;
 }
 .randomcode p {
     background-color: #aeadad; 
 }
 #codes {
-    height: 40px;
+    height: 30px;
 }
 
 
